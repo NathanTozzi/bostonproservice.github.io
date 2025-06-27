@@ -3,76 +3,146 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Boston Pro Services</title>
+  <title>Boston Pro Service | Home Services Made Easy</title>
   <style>
     body {
       background-color: #fefaf3;
       font-family: Arial, sans-serif;
-      text-align: center;
-      padding: 40px;
+      margin: 0;
+      padding: 0;
       color: #2c2c2c;
     }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
     h1 {
       font-size: 2.5em;
       margin-bottom: 10px;
     }
-    p.lead {
+
+    p.subheading {
       font-size: 1.2em;
+      color: #555;
       margin-bottom: 30px;
     }
-    ul {
+
+    ul.services {
       list-style: none;
       padding: 0;
       text-align: left;
-      max-width: 500px;
       margin: 0 auto 30px auto;
+      max-width: 500px;
     }
-    ul li::before {
+
+    ul.services li::before {
       content: "✔️ ";
       color: #27ae60;
+      margin-right: 5px;
     }
-    .button-primary {
+
+    a.button-primary, a.button-secondary {
       display: inline-block;
-      background-color: #2c2c2c;
-      color: #fff;
-      padding: 12px 20px;
-      margin: 10px auto;
+      padding: 12px 22px;
       text-decoration: none;
       border-radius: 6px;
+      margin: 10px auto;
       font-size: 1.1em;
     }
+
+    .button-primary {
+      background-color: #2c2c2c;
+      color: #fff;
+    }
+
     .button-secondary {
-      display: inline-block;
       border: 2px solid #2c2c2c;
       color: #2c2c2c;
-      padding: 10px 18px;
-      text-decoration: none;
-      border-radius: 6px;
-      font-size: 1em;
-      margin-bottom: 20px;
     }
+
     .discount-note {
       margin-top: 20px;
       font-size: 1em;
+      color: #555;
+    }
+
+    form {
+      text-align: left;
+      margin-top: 40px;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    form button {
+      background-color: #27ae60;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .footer {
+      font-size: 0.9em;
+      color: #aaa;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.8em;
+      }
+      .button-primary, .button-secondary {
+        width: 90%;
+        display: block;
+      }
     }
   </style>
 </head>
 <body>
 
-  <h1>Junk Gone Today, Peace of Mind Tomorrow.</h1>
-  <p class="lead">Serving Greater Boston · Same-Day Pickups Available</p>
+  <div class="container">
+    <h1>Boston Pro Service</h1>
+    <p class="subheading">Fast, Affordable, Local Home Services</p>
 
-  <ul>
-    <li>Fast, Affordable, No-Hassle Service</li>
-    <li>Friendly, Licensed & Insured Team</li>
-    <li>Homes · Apartments · Offices · Yards</li>
-  </ul>
+    <ul class="services">
+      <li>Junk Removal - Same Day Service Available</li>
+      <li>Handyman Services - Repairs, Installs, Odd Jobs</li>
+      <li>Plumbing - Quick Fixes & Small Jobs</li>
+    </ul>
 
-  <a class="button-primary" href="tel:+16171234567">Call/Text (617) 123-4567</a>
-  <br>
-  <a class="button-secondary" href="https://bostonproservice.com">Book Now at BostonProService.com</a>
+    <a class="button-primary" href="tel:+16171234567">📞 Call/Text (617) 123-4567</a>
+    <br>
+    <a class="button-secondary" href="mailto:nathan@bostonproservice.com">📧 Get a Free Quote</a>
 
-  <p class="discount-note">Mention this ad for 10% OFF your first service!</p>
+    <p class="discount-note">Mention this site for 10% OFF your first service!</p>
+
+    <h2>Request a Quote Online</h2>
+    <form action="https://formsubmit.co/your@email.com" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <input type="tel" name="phone" placeholder="Your Phone Number">
+      <textarea name="message" rows="4" placeholder="What service do you need?" required></textarea>
+      <button type="submit">Submit Request</button>
+    </form>
+
+    <div class="footer">
+      Serving Greater Boston | Licensed & Insured
+    </div>
+  </div>
 
 </body>
 </html>
