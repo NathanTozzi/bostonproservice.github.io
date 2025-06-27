@@ -1,10 +1,78 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Boston Pro Service</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boston Pro Services</title>
+  <style>
+    body {
+      background-color: #fefaf3;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 40px;
+      color: #2c2c2c;
+    }
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+    p.lead {
+      font-size: 1.2em;
+      margin-bottom: 30px;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      text-align: left;
+      max-width: 500px;
+      margin: 0 auto 30px auto;
+    }
+    ul li::before {
+      content: "✔️ ";
+      color: #27ae60;
+    }
+    .button-primary {
+      display: inline-block;
+      background-color: #2c2c2c;
+      color: #fff;
+      padding: 12px 20px;
+      margin: 10px auto;
+      text-decoration: none;
+      border-radius: 6px;
+      font-size: 1.1em;
+    }
+    .button-secondary {
+      display: inline-block;
+      border: 2px solid #2c2c2c;
+      color: #2c2c2c;
+      padding: 10px 18px;
+      text-decoration: none;
+      border-radius: 6px;
+      font-size: 1em;
+      margin-bottom: 20px;
+    }
+    .discount-note {
+      margin-top: 20px;
+      font-size: 1em;
+    }
+  </style>
 </head>
 <body>
-  <h1>Welcome to Boston Pro Service</h1>
-  <p>Get your free home services quote today!</p>
+
+  <h1>Junk Gone Today, Peace of Mind Tomorrow.</h1>
+  <p class="lead">Serving Greater Boston · Same-Day Pickups Available</p>
+
+  <ul>
+    <li>Fast, Affordable, No-Hassle Service</li>
+    <li>Friendly, Licensed & Insured Team</li>
+    <li>Homes · Apartments · Offices · Yards</li>
+  </ul>
+
+  <a class="button-primary" href="tel:+16171234567">Call/Text (617) 123-4567</a>
+  <br>
+  <a class="button-secondary" href="https://bostonproservice.com">Book Now at BostonProService.com</a>
+
+  <p class="discount-note">Mention this ad for 10% OFF your first service!</p>
+
 </body>
 </html>
