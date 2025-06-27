@@ -3,73 +3,59 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Boston Pro Service | Home Services Made Easy</title>
+  <title>Boston Pro Service | Trusted Local Home Services</title>
   <style>
     body {
-      background-color: #fefaf3;
-      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
-      color: #2c2c2c;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
     }
-
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
+    header {
+      background-color: #002b45;
+      color: white;
       padding: 40px 20px;
       text-align: center;
     }
-
+    header img {
+      max-width: 150px;
+      margin-bottom: 20px;
+    }
     h1 {
-      font-size: 2.5em;
       margin-bottom: 10px;
     }
-
-    p.subheading {
-      font-size: 1.2em;
-      color: #555;
-      margin-bottom: 30px;
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 40px 20px;
+      background-color: #ffffff;
     }
-
-    ul.services {
-      list-style: none;
-      padding: 0;
-      text-align: left;
-      margin: 0 auto 30px auto;
-      max-width: 500px;
+    .service {
+      background: #f0f0f0;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      text-align: center;
     }
-
-    ul.services li::before {
-      content: "✔️ ";
-      color: #27ae60;
-      margin-right: 5px;
+    .service img {
+      max-width: 100%;
+      border-radius: 4px;
+      margin-bottom: 10px;
     }
-
-    a.button-primary, a.button-secondary {
+    .cta {
+      text-align: center;
+      margin: 40px 20px;
+    }
+    .cta a {
       display: inline-block;
-      padding: 12px 22px;
-      text-decoration: none;
+      background-color: #27ae60;
+      color: white;
+      padding: 15px 30px;
       border-radius: 6px;
-      margin: 10px auto;
-      font-size: 1.1em;
+      text-decoration: none;
+      font-size: 1.2em;
     }
-
-    .button-primary {
-      background-color: #2c2c2c;
-      color: #fff;
-    }
-
-    .button-secondary {
-      border: 2px solid #2c2c2c;
-      color: #2c2c2c;
-    }
-
-    .discount-note {
-      margin-top: 20px;
-      font-size: 1em;
-      color: #555;
-    }
-
     form {
       text-align: left;
       margin-top: 40px;
@@ -77,7 +63,6 @@
       margin-left: auto;
       margin-right: auto;
     }
-
     form input, form textarea {
       width: 100%;
       padding: 10px;
@@ -85,7 +70,6 @@
       border: 1px solid #ccc;
       border-radius: 4px;
     }
-
     form button {
       background-color: #27ae60;
       color: white;
@@ -94,18 +78,18 @@
       border-radius: 4px;
       cursor: pointer;
     }
-
     .footer {
+      background-color: #002b45;
+      color: #ccc;
+      text-align: center;
+      padding: 20px;
       font-size: 0.9em;
-      color: #aaa;
-      margin-top: 40px;
     }
-
     @media (max-width: 600px) {
       h1 {
         font-size: 1.8em;
       }
-      .button-primary, .button-secondary {
+      .button-primary, .button-secondary, .cta a {
         width: 90%;
         display: block;
       }
@@ -114,48 +98,54 @@
 </head>
 <body>
 
-  <div class="container">
+  <header>
+    <img src="images/logo.png" alt="Boston Pro Service Logo">
     <h1>Boston Pro Service</h1>
-    <p class="subheading">Fast, Affordable, Local Home Services</p>
+    <p>Trusted, Affordable, Local Home Services in Greater Boston</p>
+  </header>
 
-    <ul class="services">
-      <li>Junk Removal - Same Day Service Available</li>
-      <li>Handyman Services - Repairs, Installs, Odd Jobs</li>
-      <li>Plumbing - Quick Fixes & Small Jobs</li>
-    </ul>
-
-    <a class="button-primary" href="tel:+16171234567">📞 Call/Text (617) 123-4567</a>
-    <br>
-    <a class="button-secondary" href="mailto:nathan@bostonproservice.com">📧 Get a Free Quote</a>
-
-    <p class="discount-note">Mention this site for 10% OFF your first service!</p>
-
-    <h2>Request a Quote Online</h2>
-    <form action="https://formsubmit.co/nathan@bostonproservice.com" method="POST">
-
-  <!-- SPAM PROTECTION: Honeypot Field (Bots fill this, humans won’t) -->
-  <input type="text" name="_honey" style="display:none">
-
-  <!-- SPAM PROTECTION: Disable Captcha (optional, recommended if you’re not using paid FormSubmit CAPTCHA) -->
-  <input type="hidden" name="_captcha" value="false">
-
-  <!-- SPAM PROTECTION: Optional Redirect After Successful Submit -->
-  <input type="hidden" name="_next" value="https://bostonproservice.com/thank-you.html">
-
-  <!-- Visible User Fields -->
-  <input type="text" name="name" placeholder="Your Name" required>
-  <input type="email" name="email" placeholder="Your Email" required>
-  <input type="tel" name="phone" placeholder="Your Phone Number">
-  <textarea name="message" rows="4" placeholder="What service do you need?" required></textarea>
-
-  <button type="submit">Submit Request</button>
-</form>
-
-
-    <div class="footer">
-      Serving Greater Boston | Licensed & Insured
+  <section class="services">
+    <div class="service">
+      <img src="images/junk-removal.jpg" alt="Junk Removal">
+      <h3>Junk Removal</h3>
+      <p>Same-day pickups and fast, hassle-free cleanouts for homes and businesses.</p>
     </div>
+
+    <div class="service">
+      <img src="images/handyman.jpg" alt="Handyman Service">
+      <h3>Handyman Service</h3>
+      <p>Repairs, installations, and odd jobs handled by our trusted team.</p>
+    </div>
+
+    <div class="service">
+      <img src="images/plumbing.jpg" alt="Plumbing">
+      <h3>Plumbing</h3>
+      <p>Quick fixes and small plumbing jobs done right, with licensed professionals.</p>
+    </div>
+  </section>
+
+  <div class="cta">
+    <a href="tel:+16171234567">📞 Call/Text (617) 123-4567 - Get a Free Quote</a>
   </div>
+
+  <h2 style="text-align:center; margin-top:40px;">Request a Quote Online</h2>
+  <form action="https://formsubmit.co/nathan@bostonproservice.com" method="POST">
+    <!-- SPAM PROTECTION -->
+    <input type="text" name="_honey" style="display:none">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_next" value="https://bostonproservice.com/thank-you.html">
+
+    <!-- FORM FIELDS -->
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <input type="tel" name="phone" placeholder="Your Phone Number">
+    <textarea name="message" rows="4" placeholder="What service do you need?" required></textarea>
+    <button type="submit">Submit Request</button>
+  </form>
+
+  <footer class="footer">
+    Serving Greater Boston | Licensed & Insured | &copy; 2025 Boston Pro Service
+  </footer>
 
 </body>
 </html>
