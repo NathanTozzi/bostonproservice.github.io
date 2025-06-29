@@ -3,40 +3,52 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Boston Pro Service | Trusted Local Home Services</title>
+  <title>Boston Pro Service | Fast. Cheap. Questionably Good*</title>
   <style>
     body {
       margin: 0;
-      font-family: 'Helvetica Neue', Arial, sans-serif;
-      background-color: #f9f9f9;
-      color: #333;
+      font-family: 'Comic Sans MS', Arial, sans-serif;
+      background-color: #fff8e1;
+      color: #222;
     }
     header {
-      background-color: #002b45;
-      color: white;
-      padding: 40px 20px;
+      background-color: #ff9900;
+      color: #fff;
       text-align: center;
+      padding: 40px 20px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
     }
     header img {
       max-width: 150px;
-      margin-bottom: 20px;
+      margin-bottom: 15px;
     }
     h1 {
       margin-bottom: 10px;
     }
+    .banner {
+      background-color: red;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      font-weight: bold;
+      animation: blink 1s infinite alternate;
+    }
+    @keyframes blink {
+      from { opacity: 1; }
+      to { opacity: 0.6; }
+    }
     .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
       padding: 40px 20px;
-      background-color: #ffffff;
     }
     .service {
-      background: #f0f0f0;
+      background: #fff3cd;
+      border: 2px dashed #ff9900;
+      margin-bottom: 30px;
       padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       text-align: center;
+      border-radius: 8px;
     }
     .service img {
       max-width: 100%;
@@ -45,54 +57,47 @@
     }
     .cta {
       text-align: center;
-      margin: 40px 20px;
+      background-color: #ffebcc;
+      padding: 30px 20px;
+      margin: 30px 0;
+      border-top: 4px solid #ff9900;
+      border-bottom: 4px solid #ff9900;
     }
     .cta a {
       display: inline-block;
-      background-color: #27ae60;
+      background-color: #ff9900;
       color: white;
       padding: 15px 30px;
       border-radius: 6px;
       text-decoration: none;
-      font-size: 1.2em;
+      font-size: 1.3em;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
     }
-    form {
-      text-align: left;
-      margin-top: 40px;
-      max-width: 500px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    form input, form textarea {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 15px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-    form button {
-      background-color: #27ae60;
-      color: white;
-      padding: 12px 20px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-    .footer {
-      background-color: #002b45;
-      color: #ccc;
-      text-align: center;
+    .reviews {
+      background: #e0ffe0;
       padding: 20px;
-      font-size: 0.9em;
+      margin: 20px;
+      border-radius: 8px;
     }
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 1.8em;
-      }
-      .button-primary, .button-secondary, .cta a {
-        width: 90%;
-        display: block;
-      }
+    .review {
+      border-bottom: 1px solid #ccc;
+      padding: 10px 0;
+    }
+    .featured {
+      text-align: center;
+      font-size: 0.9em;
+      color: #666;
+      margin-bottom: 30px;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.9em;
+      color: #555;
+      padding: 20px;
+    }
+    .tiny {
+      font-size: 0.7em;
+      color: #888;
     }
   </style>
 </head>
@@ -101,50 +106,67 @@
   <header>
     <img src="images/logo.png" alt="Boston Pro Service Logo">
     <h1>Boston Pro Service</h1>
-    <p>Trusted, Affordable, Local Home Services in Greater Boston</p>
+    <p>“One Call Solves It All!”*</p>
   </header>
+
+  <div class="banner">
+    🚨 LIMITED TIME OFFER: Book Today and Save... Something! 🚨
+  </div>
+
+  <div class="featured">
+    As Seen On: <em>Our Own Facebook Page • Craig’s List • A Handwritten Flyer at Stop & Shop</em>
+  </div>
 
   <section class="services">
     <div class="service">
       <img src="images/junk-removal.jpg" alt="Junk Removal">
       <h3>Junk Removal</h3>
-      <p>Same-day pickups and fast, hassle-free cleanouts for homes and businesses.</p>
+      <p>We show up when we say we will. Usually. Fast, reliable, and 100% disposal guaranteed!*</p>
     </div>
 
     <div class="service">
-      <img src="images/handyman-service.jpg" alt="Handyman Service">
-      <h3>Handyman Service</h3>
-      <p>Repairs, installations, and odd jobs handled by our trusted team.</p>
+      <img src="images/handyman.jpg" alt="Handyman Service">
+      <h3>Handyman Services</h3>
+      <p>Leaks? Broken stuff? We'll fix it... or at least find someone who will. Competitive pricing based on gut instinct and Google searches.*</p>
     </div>
 
     <div class="service">
       <img src="images/plumbing.jpg" alt="Plumbing">
-      <h3>Plumbing</h3>
-      <p>Quick fixes and small plumbing jobs done right, with licensed professionals.</p>
+      <h3>Plumbing Solutions</h3>
+      <p>Drips, clogs, or mystery water noises? Our "in-house" team (aka a guy with tools we know) will handle it.*</p>
     </div>
   </section>
 
   <div class="cta">
-    <a href="tel:+16174688107">📞 Call/Text (617) 468-8107 - Get a Free Quote</a>
+    <p>Boston’s #1 Locally Owned, Definitely Not Outsourcing, Family-Run, Multi-Service Business*</p>
+    <a href="tel:+16174688107">📞 Call Now: (617) 468-8107</a>
+    <p class="tiny">*Subject to availability. Services performed by a rotating cast of external contractors. Results may vary.</p>
   </div>
 
-  <h2 style="text-align:center; margin-top:40px;">Request a Quote Online</h2>
-  <form action="https://formsubmit.co/nathan@bostonproservice.com" method="POST">
-    <!-- SPAM PROTECTION -->
-    <input type="text" name="_honey" style="display:none">
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_next" value="https://bostonproservice.com/thank-you.html">
+  <div class="reviews">
+    <h2>Customer Reviews (Definitely Real)</h2>
+    <div class="review">
+      ⭐⭐⭐⭐⭐ – "Showed up within 3 days! Way faster than I expected. Thanks Boston Pro Service!" – Mike R.
+    </div>
+    <div class="review">
+      ⭐⭐⭐⭐⭐ – "I called for junk removal and they also fixed my sink while they were at it. Didn’t even ask. Incredible." – Linda P.
+    </div>
+    <div class="review">
+      ⭐⭐⭐⭐⭐ – "I don’t know how they do it… but it’s done now, and that’s what counts." – Anonymous, Boston MA
+    </div>
+  </div>
 
-    <!-- FORM FIELDS -->
-    <input type="text" name="name" placeholder="Your Name" required>
-    <input type="email" name="email" placeholder="Your Email" required>
-    <input type="tel" name="phone" placeholder="Your Phone Number">
-    <textarea name="message" rows="4" placeholder="What service do you need?" required></textarea>
-    <button type="submit">Submit Request</button>
+  <h2 style="text-align:center;">Online Quote Request (We May Actually Call You Back!)</h2>
+  <form action="https://formsubmit.co/nathan@bostonproservice.com" method="POST" style="max-width:500px; margin: 20px auto; padding:20px; background:#fff8e1; border:1px solid #ccc; border-radius:8px;">
+    <input type="text" name="name" placeholder="Your Name" required style="width:100%; margin-bottom:10px; padding:10px;">
+    <input type="email" name="email" placeholder="Your Email" required style="width:100%; margin-bottom:10px; padding:10px;">
+    <input type="tel" name="phone" placeholder="Your Phone Number" style="width:100%; margin-bottom:10px; padding:10px;">
+    <textarea name="message" rows="4" placeholder="What service do you need?" required style="width:100%; margin-bottom:10px; padding:10px;"></textarea>
+    <button type="submit" style="width:100%; padding:12px; background:#ff9900; color:white; border:none; border-radius:4px;">Submit Request</button>
   </form>
 
-  <footer class="footer">
-    Serving Greater Boston | Licensed & Insured | &copy; 2025 Boston Pro Service
+  <footer>
+    Serving Greater Boston | “Family-Owned” Since… Well… Recently | &copy; 2025 Boston Pro Service
   </footer>
 
 </body>
