@@ -19,6 +19,16 @@
       color: white;
       text-align: center;
       padding: 40px 20px;
+      position: relative; /* Makes logo positioning relative to header */
+    }
+    .logo-top-left {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      z-index: 1000;
+    }
+    .logo-top-left img {
+      height: 80px;
     }
     nav {
       background-color: #1c2833;
@@ -74,28 +84,16 @@
       padding: 20px;
       margin-top: 40px;
     }
-    /* Logo Top Right Styles */
-    .logo-top-right {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      z-index: 1000;
-    }
-    .logo-top-right img {
-      height: 50px;
-    }
   </style>
 </head>
 <body>
 
-<!-- Clickable Logo in Top Right -->
-<div class="logo-top-right">
-  <a href="index.html">
-    <img src="images/logo-new.png" alt="Boston Pro Service Logo">
-  </a>
-</div>
-
 <header>
+  <div class="logo-top-left">
+    <a href="index.html">
+      <img src="images/logo-new.png" alt="Boston Pro Service Logo">
+    </a>
+  </div>
   <h1>Boston Pro Service</h1>
   <p>Your Trusted Junk Removal & Home Services Team in Greater Boston</p>
 </header>
