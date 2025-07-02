@@ -6,21 +6,16 @@
   <title>Boston Pro Service | Fast & Affordable Home Services</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-image: url('boston.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  color: #333;
-}
-.content {
-  background-color: rgba(255, 255, 255, 0.95);
-  border-radius: 8px;
-  padding: 20px;
-}
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background-image: url('boston.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      color: #333;
+    }
     .top-bar {
       background-color: #03254a;
       color: white;
@@ -32,17 +27,14 @@ body {
     .top-bar img {
       height: 60px;
     }
-    .phone-cta {
-      font-size: 1.2em;
-    }
-    .phone-cta a {
-      background-color: #f4b400;
-      color: #03254a;
-      padding: 8px 12px;
+    nav a {
+      color: white;
+      margin-left: 15px;
       text-decoration: none;
-      border-radius: 4px;
-      margin-left: 10px;
       font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
     }
     .hero {
       background-color: #f4b400;
@@ -62,7 +54,9 @@ body {
       display: flex;
       max-width: 1200px;
       margin: 40px auto;
-      padding: 0 20px;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.95);
+      border-radius: 8px;
     }
     .main {
       flex: 2;
@@ -112,10 +106,12 @@ body {
 
 <div class="top-bar">
   <a href="index.html"><img src="images/logo-new.png" alt="Boston Pro Service Logo"></a>
-  <div class="phone-cta">
-    📞 (617) 468-8107
-    <a href="#form">Get a Free Quote</a>
-  </div>
+  <nav>
+    <a href="services.html">Services</a>
+    <a href="about.html">About</a>
+    <a href="reviews.html">Reviews</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 </div>
 
 <section class="hero">
