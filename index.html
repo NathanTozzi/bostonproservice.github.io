@@ -27,14 +27,21 @@
     .top-bar img {
       height: 60px;
     }
-    nav a {
-      color: white;
-      margin-left: 15px;
-      text-decoration: none;
+    .phone-cta {
+      text-align: right;
+    }
+    .phone-cta span {
+      display: block;
+      margin-bottom: 5px;
       font-weight: bold;
     }
-    nav a:hover {
-      text-decoration: underline;
+    .phone-cta a {
+      background-color: #f4b400;
+      color: #03254a;
+      padding: 8px 16px;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: bold;
     }
     .hero {
       background-color: #f4b400;
@@ -49,6 +56,25 @@
     .hero p {
       font-size: 1.2em;
       margin-top: 10px;
+      margin-bottom: 20px;
+    }
+    .hero-nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .hero-nav a {
+      background-color: #03254a;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+    .hero-nav a:hover {
+      background-color: #021d38;
     }
     .content {
       display: flex;
@@ -106,17 +132,22 @@
 
 <div class="top-bar">
   <a href="index.html"><img src="images/logo-new.png" alt="Boston Pro Service Logo"></a>
-  <nav>
-    <a href="services.html">Services</a>
-    <a href="about.html">About</a>
-    <a href="reviews.html">Reviews</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+  <div class="phone-cta">
+    <span>📞 (617) 468-8107</span>
+    <a href="#form">Request a Free Quote</a>
+  </div>
 </div>
 
 <section class="hero">
   <h1>$50 Off Any Service</h1>
   <p>Same-Day Service Available – Call Now!</p>
+  
+  <div class="hero-nav">
+    <a href="services.html">Services</a>
+    <a href="about.html">About</a>
+    <a href="reviews.html">Reviews</a>
+    <a href="contact.html">Contact</a>
+  </div>
 </section>
 
 <div class="content">
@@ -163,6 +194,7 @@
 
 <footer>
   Serving Greater Boston | Licensed & Insured | © 2025 Boston Pro Service<br>
+  <small>Boston Pro Service partners with independently licensed and insured contractors for all services.</small>
 </footer>
 
 </body>
