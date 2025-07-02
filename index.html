@@ -8,6 +8,9 @@
   <meta name="keywords" content="Boston junk removal, Boston handyman, Boston plumbing help, local home services, Boston Pro Service, same day junk pickup, affordable handyman Boston">
   <meta name="author" content="Boston Pro Service">
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
     body {
       margin: 0;
       font-family: Arial, sans-serif;
@@ -19,7 +22,11 @@
       color: white;
       text-align: center;
       padding: 40px 20px;
-      position: relative; /* Makes logo positioning relative to header */
+      position: relative;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+    header h1, header p {
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
     }
     .logo-top-left {
       position: absolute;
@@ -29,17 +36,26 @@
     }
     .logo-top-left img {
       height: 80px;
+      transition: transform 0.3s ease;
+    }
+    .logo-top-left img:hover {
+      transform: scale(1.05);
     }
     nav {
       background-color: #1c2833;
       text-align: center;
       padding: 10px 0;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     }
     nav a {
       color: white;
       margin: 0 15px;
       text-decoration: none;
       font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #ffcc00;
     }
     .hero {
       background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('images/boston.jpg') center/cover no-repeat;
@@ -49,6 +65,11 @@
     }
     .hero h1 {
       font-size: 2.5em;
+      animation: fadeInDown 1s ease forwards;
+    }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
     }
     .button {
       display: inline-block;
@@ -58,22 +79,21 @@
       margin-top: 20px;
       border-radius: 5px;
       text-decoration: none;
-      transition: background-color 0.3s ease;
+      transition: transform 0.2s ease, background-color 0.3s ease;
     }
     .button:hover {
       background-color: #1e8449;
+      transform: scale(1.05);
     }
     section {
       max-width: 1000px;
       margin: 40px auto;
       padding: 0 20px;
-    }
-    .fade-in {
       opacity: 0;
       transform: translateY(20px);
       transition: opacity 1s ease, transform 1s ease;
     }
-    .fade-in.visible {
+    section.visible {
       opacity: 1;
       transform: translateY(0);
     }
@@ -83,6 +103,7 @@
       text-align: center;
       padding: 20px;
       margin-top: 40px;
+      font-size: 0.9em;
     }
   </style>
 </head>
@@ -140,19 +161,25 @@
 </footer>
 
 <script>
-  // Simple fade-in on scroll
-  const faders = document.querySelectorAll('.fade-in');
+  // Fade-in on scroll for each section
+  const sections = document.querySelectorAll('section');
+
+  const appearOptions = {
+    threshold: 0.2
+  };
 
   const appearOnScroll = new IntersectionObserver(function(entries, observer) {
     entries.forEach(entry => {
-      if(entry.isIntersecting){
+      if (entry.isIntersecting) {
         entry.target.classList.add('visible');
         observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.2 });
+  }, appearOptions);
 
-  faders.forEach(fader => appearOnScroll.observe(fader));
+  sections.forEach(section => {
+    appearOnScroll.observe(section);
+  });
 </script>
 
 </body>
