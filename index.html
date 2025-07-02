@@ -3,117 +3,94 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Boston Pro Service | Fast, Affordable Junk Removal & Home Services in Boston</title>
-  <meta name="description" content="Fast, affordable junk removal, handyman services, and small plumbing jobs across Boston. Locally owned & operated. Get a free quote today!">
-  <meta name="keywords" content="Boston junk removal, Boston handyman, Boston plumbing help, local home services, same day service Boston, Boston Pro Service">
-  <meta name="author" content="Boston Pro Service">
+  <title>Boston Pro Service | Fast & Affordable Home Services</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: 'Arial', sans-serif;
-      background-color: #f9f9f9;
+      font-family: 'Montserrat', sans-serif;
+      background-color: #f4f6f8;
       color: #333;
     }
-    header {
-      background-color: #2c3e50;
+    .top-bar {
+      background-color: #03254a;
       color: white;
-      padding: 20px 20px 60px 20px;
-      position: relative;
-      text-align: center;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
     }
-    header img {
-      position: absolute;
-      top: 20px;
-      left: 20px;
-      height: 80px;
-      cursor: pointer;
+    .top-bar img {
+      height: 60px;
     }
-    nav {
-      background-color: #1c2833;
-      text-align: center;
-      padding: 12px 0;
+    .phone-cta {
+      font-size: 1.2em;
     }
-    nav a {
-      color: white;
-      margin: 0 15px;
+    .phone-cta a {
+      background-color: #f4b400;
+      color: #03254a;
+      padding: 8px 12px;
       text-decoration: none;
+      border-radius: 4px;
+      margin-left: 10px;
       font-weight: bold;
-      transition: color 0.3s;
-    }
-    nav a:hover {
-      color: #f1c40f;
     }
     .hero {
-      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/boston.jpg') center/cover no-repeat;
-      color: white;
+      background-color: #f4b400;
       text-align: center;
-      padding: 100px 20px;
+      padding: 50px 20px;
+      color: #03254a;
     }
     .hero h1 {
-      font-size: 2.8em;
-      margin-bottom: 10px;
+      font-size: 2.5em;
+      margin: 0;
     }
     .hero p {
       font-size: 1.2em;
+      margin-top: 10px;
     }
-    .cta-button {
-      background-color: #27ae60;
-      color: white;
-      padding: 14px 28px;
-      text-decoration: none;
-      display: inline-block;
-      margin-top: 20px;
-      border-radius: 5px;
-      transition: background-color 0.3s, transform 0.2s;
-    }
-    .cta-button:hover {
-      background-color: #1e8449;
-      transform: scale(1.05);
-    }
-    section {
-      max-width: 1100px;
+    .content {
+      display: flex;
+      max-width: 1200px;
       margin: 40px auto;
       padding: 0 20px;
     }
-    h2 {
-      color: #2c3e50;
+    .main {
+      flex: 2;
+      margin-right: 20px;
     }
-    ul li {
-      margin-bottom: 10px;
-    }
-    .form-section {
-      background-color: #ffffff;
-      padding: 30px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    .sidebar-form {
+      flex: 1;
+      background-color: white;
+      padding: 20px;
       border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
-    .form-section label {
-      font-weight: bold;
-      display: block;
-      margin-bottom: 5px;
+    .sidebar-form h2 {
+      margin-top: 0;
+      color: #03254a;
     }
-    .form-section input, .form-section textarea, .form-section select {
+    .sidebar-form input, .sidebar-form textarea, .sidebar-form select {
       width: 100%;
-      padding: 12px;
-      margin-bottom: 15px;
+      padding: 10px;
+      margin-bottom: 10px;
       border: 1px solid #ccc;
       border-radius: 5px;
     }
-    .form-section button {
-      background-color: #27ae60;
+    .sidebar-form button {
+      background-color: #03254a;
       color: white;
-      padding: 12px 20px;
+      padding: 12px;
       border: none;
       border-radius: 5px;
       cursor: pointer;
-      transition: background-color 0.3s, transform 0.2s;
+      width: 100%;
     }
-    .form-section button:hover {
-      background-color: #1e8449;
-      transform: scale(1.05);
+    .sidebar-form button:hover {
+      background-color: #021d38;
     }
     footer {
-      background-color: #1c2833;
+      background-color: #03254a;
       color: #ccc;
       text-align: center;
       padding: 20px;
@@ -124,72 +101,63 @@
 </head>
 <body>
 
-<header>
-  <a href="index.html">
-    <img src="images/logo-new.png" alt="Boston Pro Service Logo">
-  </a>
-  <h1>Boston Pro Service</h1>
-  <p>Your Local Partner for Junk Removal, Handyman Work, & Plumbing Help in Greater Boston</p>
-</header>
-
-<nav>
-  <a href="services.html">Services</a>
-  <a href="about.html">About Us</a>
-  <a href="reviews.html">Reviews</a>
-  <a href="contact.html">Contact</a>
-</nav>
+<div class="top-bar">
+  <a href="index.html"><img src="images/logo-new.png" alt="Boston Pro Service Logo"></a>
+  <div class="phone-cta">
+    📞 (617) 468-8107
+    <a href="#form">Get a Free Quote</a>
+  </div>
+</div>
 
 <section class="hero">
-  <h1>Fast Service • Same Day Appointments • Locally Owned</h1>
-  <p>Junk Removal • Small Handyman Repairs • Minor Plumbing Jobs</p>
-  <a href="#quote-form" class="cta-button">Get My Free Quote</a>
+  <h1>$50 Off Any Service</h1>
+  <p>Same-Day Service Available – Call Now!</p>
 </section>
 
-<section>
-  <h2>Why Choose Boston Pro Service?</h2>
-  <ul>
-    <li>✅ Locally Owned & Operated</li>
-    <li>✅ Same-Day & Next-Day Appointments</li>
-    <li>✅ Transparent Pricing</li>
-    <li>✅ Friendly, Professional Service</li>
-  </ul>
-</section>
+<div class="content">
+  <div class="main">
+    <h2>Boston Pro Service – Your Local Home Services Team</h2>
+    <p>We offer fast and affordable junk removal, small handyman projects, and minor plumbing jobs across Greater Boston. Locally owned, fully insured, and committed to fast turnaround and great customer service.</p>
+    <ul>
+      <li>✅ Same-Day Availability</li>
+      <li>✅ Locally Owned & Operated</li>
+      <li>✅ Licensed & Insured Contractors</li>
+    </ul>
+  </div>
 
-<section id="quote-form" class="form-section">
-  <h2>Request a Free Quote</h2>
-  <form action="https://formsubmit.co/nathan@bostonproservice.com" method="POST">
-    <input type="hidden" name="_next" value="https://bostonproservice.com/thank-you.html">
+  <div class="sidebar-form" id="form">
+    <h2>Request a Free Quote</h2>
+    <form action="https://formsubmit.co/nathan@bostonproservice.com" method="POST">
+      <input type="hidden" name="_next" value="https://bostonproservice.com/thank-you.html">
 
-    <label for="name">Name*</label>
-    <input type="text" name="name" id="name" placeholder="Your Name" required>
+      <label>Name*</label>
+      <input type="text" name="name" required>
 
-    <label for="phone">Phone*</label>
-    <input type="tel" name="phone" id="phone" placeholder="Your Phone Number" required>
+      <label>Phone*</label>
+      <input type="tel" name="phone" required>
 
-    <label for="email">Email*</label>
-    <input type="email" name="email" id="email" placeholder="Your Email Address" required>
+      <label>Email*</label>
+      <input type="email" name="email" required>
 
-    <label for="service">Service Needed*</label>
-    <select name="service" id="service" required>
-      <option value="">-- Please Choose --</option>
-      <option>Junk Removal</option>
-      <option>Handyman Services</option>
-      <option>Plumbing Help</option>
-      <option>Other</option>
-    </select>
+      <label>Service Needed*</label>
+      <select name="service" required>
+        <option value="">Select Service</option>
+        <option>Junk Removal</option>
+        <option>Handyman Services</option>
+        <option>Plumbing Help</option>
+        <option>Other</option>
+      </select>
 
-    <label for="message">Tell us more:</label>
-    <textarea name="message" id="message" rows="4" placeholder="Give us some details..."></textarea>
+      <label>Tell us more:</label>
+      <textarea name="message" rows="4" placeholder="Tell us about your project..."></textarea>
 
-    <button type="submit">Submit Request</button>
-  </form>
-</section>
+      <button type="submit">Submit Request</button>
+    </form>
+  </div>
+</div>
 
 <footer>
-  Serving Greater Boston | Licensed & Insured | &copy; 2025 Boston Pro Service
-  <p style="font-size: 0.75em; color: #888; margin-top:10px;">
-    Boston Pro Service partners with independently licensed and insured local contractors to fulfill service requests. Boston Pro Service does not directly perform any services.
-  </p>
+  Serving Greater Boston | Licensed & Insured | © 2025 Boston Pro Service<br>
 </footer>
 
 </body>
