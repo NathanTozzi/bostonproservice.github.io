@@ -127,6 +127,74 @@
       font-size: 0.9em;
     }
   </style>
-  
+</head>
+<body>
+
+<div class="top-bar">
+  <a href="index.html"><img src="images/logo-new.png" alt="Boston Pro Service Logo"></a>
+  <div class="phone-cta">
+    <span>📞 (617) 468-8107</span>
+    <a href="#form">Request a Free Quote</a>
+  </div>
+</div>
+
+<section class="hero">
+  <h1>Our Home Services</h1>
+  <p>Fast, Affordable & Trusted in Greater Boston</p>
+
+  <div class="hero-nav">
+    <a href="services.html">Services</a>
+    <a href="about.html">About</a>
+    <a href="reviews.html">Reviews</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</section>
+
+<div class="content">
+  <div class="main">
+    <h2>We Specialize In:</h2>
+    <ul>
+      <li><strong>Junk Removal</strong> – Cleanouts, bulky waste, and appliance pickup.</li>
+      <li><strong>Handyman Projects</strong> – Shelves, doors, drywall, small installs.</li>
+      <li><strong>Minor Plumbing Help</strong> – Faucet swaps, toilet issues, small leaks.</li>
+    </ul>
+    <p>Not sure what you need? Contact us and we’ll figure it out together. We connect you to trusted, licensed local pros fast and hassle-free.</p>
+  </div>
+
+  <div class="sidebar-form" id="form">
+    <h2>Request a Free Quote</h2>
+    <form action="https://formsubmit.co/nathan@bostonproservice.com" method="POST">
+      <input type="hidden" name="_next" value="https://bostonproservice.com/thank-you.html">
+
+      <label>Name*</label>
+      <input type="text" name="name" required>
+
+      <label>Phone*</label>
+      <input type="tel" name="phone" required>
+
+      <label>Email*</label>
+      <input type="email" name="email" required>
+
+      <label>Service Needed*</label>
+      <select name="service" required>
+        <option value="">Select Service</option>
+        <option>Junk Removal</option>
+        <option>Handyman Services</option>
+        <option>Plumbing Help</option>
+        <option>Other</option>
+      </select>
+
+      <label>Tell us more:</label>
+      <textarea name="message" rows="4" placeholder="Tell us about your project..."></textarea>
+
+      <button type="submit">Submit Request</button>
+    </form>
+  </div>
+</div>
+
+<footer>
+  Serving Greater Boston | Licensed & Insured | © 2025 Boston Pro Service
+</footer>
+
 </body>
 </html>
